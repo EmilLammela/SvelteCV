@@ -1,74 +1,82 @@
 <script lang="ts">
-    import headshot from "$lib/assets/headshot.png"
+  import headshot from "$lib/assets/headshot.png";
 
-    import person from "$lib/assets/person.svg"
-    import education from "$lib/assets/education.svg"
-    import experience from "$lib/assets/experience.svg"
-    import project from "$lib/assets/project.svg"
-    import certificate from "$lib/assets/certificate.svg"
-    import language from "$lib/assets/language.svg"
-    import wrench from "$lib/assets/wrench.svg"
+  import person from "$lib/assets/person.svg";
+  import education from "$lib/assets/education.svg";
+  import experience from "$lib/assets/experience.svg";
+  import project from "$lib/assets/project.svg";
+  import certificate from "$lib/assets/certificate.svg";
+  import language from "$lib/assets/language.svg";
+  import wrench from "$lib/assets/wrench.svg";
+  import github from "$lib/assets/github.svg";
+  import linkedin from "$lib/assets/linkedin.svg";
 
-    import GridDiv from "./gridDiv.svelte"
+  import GridDiv from "./gridDiv.svelte";
+
+  let scroll: number = 0;
+
 </script>
 
-<div class="bg-gray-800 justify-center justify-self-center  text-white p-8 rounded-[4rem] w-[75vw]">
-    <div>
-        <div class="grid grid-cols-3 gap-[1vw] bg-gray-700 rounded-[3rem] p-4 justify-items-center">
+<svelte:window
+  bind:scrollY={scroll}
+/>
+
+<h1 class="fixed text-amber-800">{scroll}</h1>
+
+<div class="bg-gray-800 justify-center justify-self-center text-white p-8 rounded-[4rem] w-[75vw]">
+    <div class=" bg-gray-700 rounded-[3rem] p-4 justify-items-center">
+        <div class="w-[30%]">
+            <img src={headshot} alt="headshot" class="object-scale-down w-16 justify-self-center"/>
+        </div>
+        <div class="grid grid-cols-2 gap-[1vw] justify-items-center">
             <div class="w-[30%]">
-                <img src="{headshot}" alt="headshot" class="object-scale-down w-16 justify-self-center ">
+                <p class="justify-self-center">
+                    Etunimi Sukunimi <br /> Ohjelmistokehittäjä
+                </p>
             </div>
             <div class="w-[30%]">
-                <h1 class="justify-self-center">Title</h1>
-            </div>
-            <div class="w-[30%] ">
-                <h1 class="justify-self-center">Contact</h1>
+                <p class="justify-self-center">
+                    +358 12 123 1234 <br /> example@domain.com
+                </p>
             </div>
         </div>
-        <div class="h-[80vh] justify-items-center">
+    </div>
 
-            <GridDiv src={person}>
-                esittely
-            </GridDiv>
 
-            <GridDiv src={education}>
-                koulutus
-            </GridDiv>
+    <div class="justify-items-center">
+        <GridDiv src={person}>esittely</GridDiv>
 
-            <GridDiv src={experience}>
-                työkokemus
-            </GridDiv>
+        <GridDiv src={education}>koulutus</GridDiv>
 
-            <GridDiv src={project}>
-                projekteja
-            </GridDiv>
+        <GridDiv src={experience}>työkokemus</GridDiv>
 
-            <GridDiv src={certificate}>
-                sertifikaatteja
-            </GridDiv>
+        <GridDiv src={project}>projekteja</GridDiv>
 
-            <GridDiv src={language}>
-                kielet
-            </GridDiv>
+        <GridDiv src={certificate}>sertifikaatteja</GridDiv>
 
-            <GridDiv src={wrench}>
-                teknologiat
-            </GridDiv>
+        <GridDiv src={language}>kielet</GridDiv>
 
-            <div>
-                <p>Hyödyllisiä linkkejä</p>
-            </div>
-                    
+        <GridDiv src={wrench}>teknologiat</GridDiv>
 
+    </div>
+
+
+
+    <div class="flex bg-gray-700 rounded-[3rem] p-4 justify-items-center gap-4">
+        <div class="bg-gray-200 hover:bg-gray-400 hover:scale-110 p-3 rounded-full">
+            <a href="https://github.com">
+                <img src={github} alt="" class="w-10 h-10" />
+            </a>
         </div>
-        <div>
 
+        <div class="bg-gray-200 hover:bg-gray-400 hover:scale-110 p-3 rounded-full">
+            <a href="https://linkedin.com">
+                <img src={linkedin} alt="" class="w-10 h-10" />
+            </a>
         </div>
     </div>
 </div>
 
-
-
 <style lang="postcss">
-    @reference "tailwindcss";
+  @reference "tailwindcss";
 </style>
