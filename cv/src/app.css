@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+    --animate-testitesti: testitesti 1s ease-in-out;
+    @keyframes testitesti {
+      0%{
+        /*
+        transform: translate(400%) 
+        */
+
+        background-position: 200%;
+
+      }
+
+      100% {
+        /*
+        transform: translate(0%);
+        */
+
+        background-position: 0%;
+
+      }
+    }
+  }

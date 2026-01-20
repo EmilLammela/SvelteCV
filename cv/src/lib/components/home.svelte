@@ -1,4 +1,11 @@
 <script lang="ts">
+
+  const lorem: string = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,"
+
+
+
+
+
   import headshot from "$lib/assets/headshot.png";
 
   import person from "$lib/assets/person.svg";
@@ -44,25 +51,25 @@
 
 
     <div class="justify-items-center">
-        <GridDiv src={person}>esittely</GridDiv>
+        <GridDiv scroll={scroll} src={person} title="Esittely">{lorem}</GridDiv>
 
-        <GridDiv src={education}>koulutus</GridDiv>
+        <GridDiv scroll={scroll} src={education} title="Koulutus">{lorem}</GridDiv>
 
-        <GridDiv src={experience}>työkokemus</GridDiv>
+        <GridDiv scroll={scroll} src={experience} title="Työkokemus">{lorem}</GridDiv>
 
-        <GridDiv src={project}>projekteja</GridDiv>
+        <GridDiv scroll={scroll} src={project} title="Projekteja">{lorem}</GridDiv>
 
-        <GridDiv src={certificate}>sertifikaatteja</GridDiv>
+        <GridDiv scroll={scroll} src={certificate} title="Sertifikaatteja">{lorem}</GridDiv>
 
-        <GridDiv src={language}>kielet</GridDiv>
+        <GridDiv scroll={scroll} src={language} title="Kielitaito">{lorem}</GridDiv>
 
-        <GridDiv src={wrench}>teknologiat</GridDiv>
+        <GridDiv scroll={scroll} src={wrench} title="Teknologiat">{lorem}</GridDiv>
 
     </div>
 
 
 
-    <div class="flex bg-gray-700 rounded-[3rem] p-4 justify-items-center gap-4">
+    <div class="flex bg-gray-700 rounded-[3rem] p-4 justify-items-center align-center gap-4">
         <div class="bg-gray-200 hover:bg-gray-400 hover:scale-110 p-3 rounded-full">
             <a href="https://github.com">
                 <img src={github} alt="" class="w-10 h-10" />
@@ -80,3 +87,4 @@
 <style lang="postcss">
   @reference "tailwindcss";
 </style>
+
