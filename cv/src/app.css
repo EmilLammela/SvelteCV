@@ -4,21 +4,43 @@
     --animate-testitesti: testitesti 1s ease-in-out;
     @keyframes testitesti {
       0%{
-        /*
-        transform: translate(400%) 
-        */
-
-        background-position: 200%;
-
+        background-position: 100%;
       }
 
       100% {
-        /*
-        transform: translate(0%);
-        */
-
         background-position: 0%;
-
       }
     }
-  }
+  
+    --animate-gridText: gridText 3s ease-in-out;
+    @keyframes gridText {
+      0%{
+        background-position: 100%;
+      }
+
+      50% {
+        background-position: 100%;
+      }
+      
+      100% {
+        background-position: 0%;
+      }
+    }
+
+
+    --animate-gridImg: gridImg 2s ease-in-out;
+    @keyframes gridImg {
+      0%{
+        transform: translate(-1000%) rotate(0deg);
+      }
+
+      50%{
+        transform: translate(400%)
+      }
+
+      100% {
+        transform: translate(0%) rotate(720deg);
+      }
+    }
+
+}

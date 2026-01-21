@@ -32,12 +32,12 @@
   
   <div class="grid grid-cols-[15%_85%] gap-8 ">
   {#if scroll > scrollTrigger}
-    <div transition:fade={{duration: 1000}} class=" bg-gray-200 p-3 rounded-full  w-11 h-11">
+    <div class=" bg-gray-200 p-3 rounded-full  w-11 h-11 animate-gridImg">
       <img src="{src}" alt="" class="w-5 h-5" />
     </div>
   
 
-    <div id="title-bg" class="flex rounded-2xl h-11 items-center animate-testitesti">
+    <div id="title-bg" class="flex rounded-2xl h-11 items-center animate-gridText">
       <p class="text-left p-4">
         {title}
       </p>
@@ -60,8 +60,8 @@
   @reference "tailwindcss";
 
   #title-bg{
-    background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));
-    background-size:200%;
+    background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0.25), rgba(255,0,0,0));
+    background-size: 10000%;
   }
 
 </style>
